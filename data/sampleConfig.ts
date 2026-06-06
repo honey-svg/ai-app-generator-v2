@@ -2,6 +2,12 @@ export const sampleConfig = {
   title: "Employee Dashboard",
   components: [
     {
+      type: "skeleton",
+      count: 2,
+      height: "lg",
+      span: 12,
+    },
+    {
       type: "statsCard",
       title: "Total Employees",
       value: 120,

@@ -36,8 +36,15 @@ export const FormSchema = z.object({
   ),
 });
 
+export const LoadingSkeletonSchema = z.object({
+  type: z.literal("skeleton"),
+  count: z.number().optional(),
+  height: z.enum(["sm", "md", "lg"]).optional(),
+});
+
 export const ComponentSchema = z.union([
   StatsCardSchema,
   TableSchema,
   FormSchema,
+  LoadingSkeletonSchema,
 ]);
